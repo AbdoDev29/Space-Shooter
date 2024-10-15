@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class InstantiateBackground : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject newBackground;
+    public Transform backgroundPosition;
+   
 
-    // Update is called once per frame
-    void Update()
+  
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (collision.gameObject.tag == "NewImage")
+        {
+            Debug.Log("01010");
+            GameObject background = Instantiate(newBackground, backgroundPosition.position, Quaternion.identity);
+        }
     }
 }
