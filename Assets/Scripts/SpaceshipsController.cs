@@ -37,12 +37,14 @@ public class SpaceshipsController : MonoBehaviour
         float clampedX = Mathf.Clamp(transform.position.x, minX, maxX);
         transform.position = new Vector3(clampedX, transform.position.y, transform.position.z);
         
-       
-
-       
-
     }
+
+ 
+       
+
+}
+       
+
 
    
 
-}
