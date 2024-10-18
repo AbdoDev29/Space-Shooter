@@ -8,13 +8,12 @@ public class SpawnEnemies : MonoBehaviour
     public GameObject[] item;
     public Transform[] positionItem;
     SpaceshipsController spaceshipsController;
-    GameManager gameManager;
     [SerializeField] float itemSpeed;
    
     private void Awake()
     {
         spaceshipsController = FindObjectOfType<SpaceshipsController>();
-        gameManager = FindObjectOfType<GameManager>();
+       
     }
 
     private void Start()

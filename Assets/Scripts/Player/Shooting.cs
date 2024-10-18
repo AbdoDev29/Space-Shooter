@@ -19,8 +19,7 @@ public class Shooting : MonoBehaviour
 
     private void Start()
     {
-        if (EventSystem.current.IsPointerOverGameObject())
-            return;
+      
         StartCoroutine(NextBollet());
     }
     IEnumerator NextBollet()
@@ -28,7 +27,7 @@ public class Shooting : MonoBehaviour
         while (spaceshipsController != null)
         {
            
-            if (Input.GetMouseButton(0))
+            if (Input.GetKey(KeyCode.Space))
             {
                 GameObject righrBullet = Instantiate(bullet, bulletPosition[0].position, Quaternion.identity);
                 GameObject leftBullet = Instantiate(bullet, bulletPosition[1].position, Quaternion.identity);

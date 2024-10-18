@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class UI : MonoBehaviour
 {
@@ -21,5 +23,15 @@ public class UI : MonoBehaviour
     {
         if (spaceshipsController.isPlayerDead)
             losePanal.SetActive(true);
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void Exit()
+    {
+        Application.Quit();
     }
 }
