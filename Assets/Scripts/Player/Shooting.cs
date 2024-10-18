@@ -27,7 +27,8 @@ public class Shooting : MonoBehaviour
             {
                 GameObject righrBullet = Instantiate(bullet, bulletPosition[0].position, Quaternion.identity);
                 GameObject leftBullet = Instantiate(bullet, bulletPosition[1].position, Quaternion.identity);
-                StartCoroutine(MoveBullet(righrBullet,leftBullet));
+                GameObject middleBullet = Instantiate(bullet, bulletPosition[2].position, Quaternion.identity);
+                //StartCoroutine(MoveBullet(righrBullet,leftBullet));
                 yield return  (new WaitForSeconds(nextBulletTime));
               
             }

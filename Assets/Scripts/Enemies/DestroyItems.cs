@@ -5,9 +5,11 @@ using UnityEngine;
 
 public class DestroyItems : MonoBehaviour
 {
+   
+  
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Item")
+        if (other.gameObject.tag == "Item" || other.gameObject.tag == "Bullet")
             Destroy(other.gameObject);
     }
 }
