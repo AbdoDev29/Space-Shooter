@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 23158056617320270}
   - component: {fileID: -4919871561231785719}
   - component: {fileID: 5603379563257552286}
+  - component: {fileID: 4338184039980739734}
   m_Layer: 0
   m_Name: Mine Sample 2
   m_TagString: Item
@@ -166,6 +167,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4338184039980739734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040074329139878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dec61bb82bf0de24980670976df19be8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 1040608886635896, guid: a97415c6b57076f41a6621a7b51d63a3,
+    type: 3}
 --- !u!1 &1391615405692326
 GameObject:
   m_ObjectHideFlags: 0

@@ -20,7 +20,7 @@ public class Bullet : MonoBehaviour
         if (other.gameObject.tag == "Item")
         {
             // partical
-            Destroy(other.gameObject);
+            Destroy(other.gameObject,0.1f);
             Destroy(this.gameObject);
             score.currentScore += 1;
             score.totalScore += 1;

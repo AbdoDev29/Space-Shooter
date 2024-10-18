@@ -21,12 +21,7 @@ public class SpawnEnemies : MonoBehaviour
         StartCoroutine(CreatNewItem());
     }
 
-    private void Update()
-    {
 
-
-        
-    }
 
     IEnumerator CreatNewItem()
     {
