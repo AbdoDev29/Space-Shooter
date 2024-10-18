@@ -8,7 +8,7 @@ public class SpaceshipsController : MonoBehaviour
     [SerializeField] private float speed;
     private float horizonal;
     private Vector3 objectPosition;
-
+    public bool isPlayerDead = false;
 
     [Header("Clamp")]
     [SerializeField] float minX;
@@ -48,7 +48,7 @@ public class SpaceshipsController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Item")
         {
-            // Lose panal
+            isPlayerDead = true;
             Debug.Log("The palyer is dead!");
         }
     }

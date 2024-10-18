@@ -5,6 +5,12 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [SerializeField] float speed;
+    Score score;
+
+    private void Awake()
+    {
+        score = FindObjectOfType<Score>();
+    }
     private void Update()
     {
         transform.position += Vector3.up * speed * Time.deltaTime;
@@ -16,6 +22,9 @@ public class Bullet : MonoBehaviour
             // partical
             Destroy(other.gameObject);
             Destroy(this.gameObject);
+            score.currentScore += 1;
+            score.totalScore += 1;
+            
         }
     }
 }

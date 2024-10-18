@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class InstantiateBackground : MonoBehaviour
 {
+    SpaceshipsController spaceshipsController;
     public GameObject newBackground;
     public Transform backgroundPosition;
     public Transform player;
+
+    private void Awake()
+    {
+        spaceshipsController = FindObjectOfType<SpaceshipsController>();
+    }
     private void Update()
     {
         float distance = Vector3.Distance(transform.position, player.position);
@@ -18,14 +24,18 @@ public class InstantiateBackground : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "NewImage")
+        if (!spaceshipsController.isPlayerDead)
         {
-            Debug.Log("01010");
-            Instantiate(newBackground, backgroundPosition.position, Quaternion.identity);
-            // background.transform.SetParent(canvas.transform,false);
+            if (collision.gameObject.tag == "NewImage")
+            {
+            
+                Instantiate(newBackground, backgroundPosition.position, Quaternion.identity);
+            }
 
         }
     }
 }
            
+           
+
 

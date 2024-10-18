@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+
 
 public class Shooting : MonoBehaviour
 {
@@ -17,12 +19,15 @@ public class Shooting : MonoBehaviour
 
     private void Start()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+            return;
         StartCoroutine(NextBollet());
     }
     IEnumerator NextBollet()
     {
         while (spaceshipsController != null)
         {
+           
             if (Input.GetMouseButton(0))
             {
                 GameObject righrBullet = Instantiate(bullet, bulletPosition[0].position, Quaternion.identity);
